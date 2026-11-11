@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.studio/
+results/studio-*/
+
+# Local process logs and desktop shortcuts
+*.stdout.log
+*.stderr.log
+.studio-tests.log
+*.lnk
