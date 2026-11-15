@@ -32,7 +32,7 @@ This repository is a cleaned copy of the team's private sprint repository, built
   - `research/01`, `02`, `04` and `05`
   - `final_report/REPORT.*`
 
-**Added for this snapshot:** `README.md` (replaces the sprint README), `PROVENANCE.md`, `CONTRIBUTORS.md`, `MODIFIED_FILES.csv`, `SHA256SUMS.public.txt`, `.gitattributes` and `.env.example`. The `.env.example` replaces the sprint one, which named the team's endpoint and a deployment-specific model id; it now holds generic placeholders.
+**Added for this snapshot:** the submitted paper, `final_report/what-moves-two-ai-agents-to-bend-the-rules-together.pdf`, downloaded unchanged from the project's [Apart Research page](https://apartresearch.com/sprints/projects/what-moves-two-ai-agents-to-bend-the-rules-together-g64a); `README.md` (replaces the sprint README), `PROVENANCE.md`, `CONTRIBUTORS.md`, `MODIFIED_FILES.csv`, `SHA256SUMS.public.txt`, `.gitattributes` and `.env.example`. The `.env.example` replaces the sprint one, which named the team's endpoint and a deployment-specific model id; it now holds generic placeholders.
 
 ## Left out
 

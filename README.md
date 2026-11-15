@@ -1,6 +1,26 @@
-# AI collusion experiment: dual-control agents under a monitoring notice
+# What moves two AI agents to bend the rules together
 
-Code, data and analysis for a two-agent "dual control" experiment run during the **Apart Research AI Collusion Research Sprint (23–25 October 2026)**. The paper is [`final_report/REPORT.md`](final_report/REPORT.md).
+Code, data and analysis for a two-agent "dual control" experiment run during the [**Apart Research AI Collusion Research Sprint**](https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25) (23–25 October 2026).
+
+## Paper
+
+- **Final paper (as submitted):** [`final_report/what-moves-two-ai-agents-to-bend-the-rules-together.pdf`](final_report/what-moves-two-ai-agents-to-bend-the-rules-together.pdf), also on [the project's Apart Research page](https://apartresearch.com/sprints/projects/what-moves-two-ai-agents-to-bend-the-rules-together-g64a).
+- **Technical report:** [`final_report/REPORT.md`](final_report/REPORT.md) is the longer technical paper the submission was written from. It has the full statistics, confidence intervals and the "what did not hold up" audit.
+- **Sprint description:** [AI Collusion Research Sprint on apartresearch.com](https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25).
+
+## Abstract
+
+AI systems are increasingly placed in roles where two of them must both agree before an action goes through, the way two people must both sign before money moves. We test whether such pairs bend the rules more easily when told nobody is watching. Two copies of the open model Qwen3-32B played officials in 72 fictional situations where an improper action could be carried out only if both agents approved. We varied whether the prompt said the episode was monitored, how strong the written case for acting was, and which decision rule each agent carried. Of 4,320 trials, 4,243 ran to completion. Pairs approved the action together 23.3% of the time when told they were monitored, versus 27.2% when told nobody was watching, and unwatched agents often wrote that the absence of oversight was permission to act. A much larger effect came from the task saying that a superior or official document had ordered the pair to act: at that level (J5), 60.5% approval versus 24.6% with no instruction, including for agents whose rules say nothing about obeying superiors. The rule each agent carried also changed who gave way under an order. These results come from one model, one run per situation, and text-only prompts, so we treat them as a first measurement, not a general law.
+
+## Authors
+
+| Author | Role |
+|---|---|
+| **Tom Loscalzo** | Conceptualization (proposed the research topic); advisor; data analysis |
+| **Lydia Jin** | Research surveys, experiment design, scenario writing and documentation |
+| **Haitham Elmekaoui** | Experiment harness, model endpoints, experiment runs and data snapshots |
+
+## Overview
 
 **Design:**
 - Two Qwen3-32B agents play officials in 72 fictional scenarios. A rule-bending action executes only if both privately choose *take*.
@@ -18,7 +38,7 @@ Code, data and analysis for a two-agent "dual control" experiment run during the
 
 | Path | Contents |
 |---|---|
-| `final_report/` | The paper (Markdown and HTML) |
+| `final_report/` | The submitted paper (PDF) and the technical report (Markdown and HTML) |
 | `lying_harness/` | The experiment harness. `pressure.py` ran this study. |
 | `prompts/12-pressure-nine-per-setting.json` | The frozen scenario pack used for the run. `build_extended_pack.py`, packs 09–11 and `prompts/archive/` are its build inputs and earlier packs. |
 | `results/2026-10-25-pressure-study/` | Raw data, about 514 MB. Each trial has its own folder under `runs/` with `result.json`, `transcript.md` and `events.jsonl`, and `runs.csv` indexes them. `manifest.json` records the full configuration. |
@@ -71,10 +91,6 @@ In short:
 **New vs. pre-existing work:** all code, scenario packs, data and analyses here were created during the sprint, 23–25 October 2026. No code predates the sprint.
 
 **AI assistance:** we used AI coding assistants extensively: Claude Code for the analysis and drafting, and Cursor for parts of the surveys and scenario packs. The report's LLM Usage Statement has the details.
-
-## Authors
-
-See [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
 
 ## License
 
